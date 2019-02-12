@@ -1,0 +1,10 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    color: #5C5C5C;
+}
+
+header, aside, div, footer {
+    border: .5px solid #A2A2A2;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}

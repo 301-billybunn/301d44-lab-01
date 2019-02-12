@@ -1,0 +1,73 @@
+body>* {
+    margin: 0 auto;
+}
+
+#header, #aside, #div-c, #div-d, #box-section, #footer {
+    width: 480px;
+}
+
+#header {
+    height: 75px;
+    line-height: 75px;
+    background: #00eea8;
+}
+
+#aside {
+    height: 150px;
+    line-height: 150px;
+    background: #1ce2b1;
+}
+
+#div-c, #div-d {
+    height: 125px;
+    line-height: 125px;
+}
+
+#div-c {
+    background: #38d6ba;
+}
+
+#div-d {
+    background: #55cbc3;
+}
+
+#box-section {
+    height: 500px;
+}
+
+.box {
+    height: 250px;
+    width: 240px;
+    line-height: 250px;
+    background: #00eea8;
+}
+
+#div-e, #div-g {
+    float: left;
+}
+
+#div-f, #div-h {
+    float: right;
+}
+
+#div-e {
+    background: #71bfcc;
+}
+
+#div-f {
+    background: #8db3d6;
+}
+
+#div-g {
+    background: #aaa8df;
+}
+
+#div-h {
+    background: #c69ce8;
+}
+
+#footer {
+    height: 80px;
+    line-height: 80px;
+    background: #ff85fb;
+}
