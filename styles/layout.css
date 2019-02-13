@@ -2,6 +2,11 @@ body>*, main>* {
     margin: 0 auto;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 #header, #aside, #div-c, #div-d, #box-section, #footer {
     width: 480px;
 }
@@ -12,10 +17,18 @@ body>*, main>* {
     background: #00eea8;
 }
 
+#tablet-flexbox {
+    border: none;
+}
+
 #aside {
     height: 150px;
     line-height: 150px;
     background: #1ce2b1;
+}
+
+#not-aside-container {
+    border: none;
 }
 
 #div-c, #div-d {
@@ -32,7 +45,9 @@ body>*, main>* {
 }
 
 #box-section {
-    height: 500px;
+    /* height: 500px; */
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .box {
@@ -43,11 +58,11 @@ body>*, main>* {
 }
 
 #div-e, #div-g {
-    float: left;
+    /* float: left; */
 }
 
 #div-f, #div-h {
-    float: right;
+    /* float: right; */
 }
 
 #div-e {
@@ -76,6 +91,7 @@ body>*, main>* {
     body {
         width: 960px;
         margin: 0 auto;
+        /* flex-flow:  */
     }
     #header {
         width: 960px;
@@ -83,26 +99,44 @@ body>*, main>* {
         line-height: 100px;
         background: lightblue;
     }
+
+    #tablet-flexbox {
+        display: flex;
+        flex-flow: row nowrap;
+        border: none;
+    }
+
     #aside {
         width: 200px;
-        height: 600px;
-        line-height: 600px;
-        float: left;
+        height: 450px;
+        line-height: 450px;
+        /* float: left; */
     }
-    main {
+
+    #not-aside-container {
+        width: 760px;
+        display: flex;
+        flex-flow: row wrap;
+        border: none;
+    }
+
+    /* main {
         float: left;
         height: 600px;
         width: 760px;
-    }
+        display: flex;
+        flex-flow: row;
+    } */
     #div-c, #div-d {
         width: 380px;
         height: 200px;
         line-height: 200px;
-        float: left;
+        /* float: left; */
     }
     #box-section {
         width: 760px;
         height: 250px;
+        flex-flow: row wrap;
     }
     .box {
         width: 190px;
@@ -110,12 +144,12 @@ body>*, main>* {
         line-height: 250px;
     }
     #div-e, #div-f, #div-g, #div-h {
-        float: left;
+        /* float: left; */
     }
     #footer {
-        width: 760px;
+        width: 960px;
         height: 150px;
         line-height: 150px;
-        float: left;
+        /* float: left; */
     }
 }
