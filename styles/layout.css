@@ -153,3 +153,37 @@ body {
         /* float: left; */
     }
 }
+
+@media screen and (min-width: 1024px) {
+    
+    body {
+        width: 90%;
+
+    }
+
+    #header {
+        width: 100%;
+    }
+
+    #tablet-flexbox {
+        width: 100%;
+    }
+
+    #aside {
+        width: 20%;
+    }
+
+    #not-aside-container {
+        width: 80%;
+    }
+
+    #div-c, #div-d {
+        width: 50%;
+    }
+
+    #box-section {
+        
+    }
+
+
+}
