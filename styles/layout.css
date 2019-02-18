@@ -8,10 +8,9 @@ body {
   height: 100%;
 }
 
-body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
+html, body, #header, #tablet-flexbox, #aside, #not-aside-container, #cd-section, #box-section, #footer {
   width: 100%;
   min-width: 320px;
-  max-width: 480px;
 }
 
 #header {
@@ -32,7 +31,13 @@ body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
   border: none;
 }
 
+#cd-section{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 #div-c, #div-d {
+  width: 100%;
   height: 125px;
   line-height: 125px;
 }
@@ -40,17 +45,13 @@ body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
 #box-section {
   display: flex;
   flex-flow: row wrap;
-  height: 100%;
-  max-height: 500px;
-  min-height: 333px;
+  height:500px;
 }
 
 .box {
-  /* height: 167px; */
   max-height: 250px;
   min-height: 167px;
   width: 50%;
-  max-width: 240px;
   line-height: 250px;
   background: #00eea8;
 }
@@ -98,125 +99,18 @@ body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
   background: #ff00b8;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    /* width: 960px; */
-    /* margin: 0 auto; */
-  }
-  body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
-    /* min-width: 768px; */
-    max-width: 1024px;
-  }
-  #header {
-    /* width: 100%; */
-    /* min-width: 960px; */
-    height: 100px;
-    line-height: 100px;
-    background: lightblue;
-  }
-  #tablet-flexbox {
-    display: flex;
+@media screen and (min-width: 425px) {
+  #cd-section  {
     flex-flow: row nowrap;
-    border: none;
+
   }
-  #aside {
-    width: 20.83%;
-    min-width: 160px;
-    height: 450px;
-    line-height: 450px;
-  }
-  #not-aside-container {
-    width: 79.17%;
-    min-width: 608px;
-    display: flex;
-    flex-flow: row wrap;
-    border: none;
-  }
-  #div-c, #div-d {
+  #div-c, #div-d  {
     width: 50%;
-    min-width: 304px;
     height: 200px;
     line-height: 200px;
   }
-  #box-section {
-    width: 79.17%;
-    min-width: 608px;
-    height: 250px;
-    flex-flow: row wrap;
-  }
-  .box {
-    width: 25%;
-    /* min-width: 152px; */
-    height: 250px;
-    line-height: 250px;
-  }
-  #footer {
-    width: 100%;
-    min-width: 768px;
-    height: 150px;
-    line-height: 150px;
-  }
   /* Colors */
-  #header {
-    background: #00eea8;
-  }
-  #aside {
-    background: #1ce2b1;
-  }
-  #div-c {
-    background: #38d6ba;
-  }
-  #div-d {
-    background: #55cbc3;
-  }
-  #div-e {
-    background: #71bfcc;
-  }
-  #div-f {
-    background: #8db3d6;
-  }
-  #div-g {
-    background: #aaa8df;
-  }
-  #div-h {
-    background: #c69ce8;
-  }
-  #footer {
-    background: #ff85fb;
-  }
-}
-
-/* @media screen and (min-width: 1024px) {
-  body {
-    width: 100%;
-    max-width: 1440px;
-  }
-  #header {
-    width: 100%;
-  }
-  #tablet-flexbox {
-    width: 100%;
-  }
-  #aside {
-    width: 20%;
-  }
-  #not-aside-container {
-    width: 80%;
-  }
-  #div-c, #div-d {
-    width: 50%;
-  }
-  #box-section {
-    width: 100%;
-  }
-  .box {
-    width: 25%;
-  }
-  #footer {
-    width: 100%;
-  } */
-  /* Colors */
-  /* #header {
+#header {
     background: #00e9ec;
   }
   #aside {
@@ -243,4 +137,85 @@ body, #header, #aside, #tablet-flexbox, #div-c, #div-d, #box-section, #footer {
   #footer {
     background: #4ded80;
   }
-} */
+}
+
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1024px;
+    display: block;
+  }
+  #header {
+    height: 100px;
+    line-height: 100px;
+  }
+  #tablet-flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    border: none;
+    min-width: 100%;
+  }
+  #aside {
+    width: 20.83%;
+    min-width: 0px;
+    height: 600px;
+    line-height: 450px;
+  }
+  #not-aside-container {
+    width: 79.17%;
+    display: flex;
+    flex-flow: row wrap;
+    border: none;
+  }
+  #div-c, #div-d {
+    width: 50%;
+    min-width: 0px;
+    height: 200px;
+    line-height: 200px;
+  }
+  #box-section {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 250px;
+    flex-flow: row wrap;
+  }
+  .box {
+    width: 25%;
+    height: 250px;
+    line-height: 250px;
+  }
+  #footer {
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+  }
+  /* Colors */
+  #header {
+    background: #afa4ef;
+  }
+  #aside {
+    background: #b4abdf;
+  }
+  #div-c {
+    background: #b9b3cf;
+  }
+  #div-d {
+    background: #bfbbbf;
+  }
+  #div-e {
+    background: #c4c3af;
+  }
+  #div-f {
+    background: #c9ca9f;
+  }
+  #div-g {
+    background: #cfd28f;
+  }
+  #div-h {
+    background: #d4da7f;
+  }
+  #footer {
+    background: #dfea60;
+  }
+}
