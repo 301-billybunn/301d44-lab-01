@@ -5,6 +5,6 @@ Estimate of time needed to complete: **30 minutes**
 
 Start time: **1:20 PM**
 
-Finish time: **______**
+Finish time: **2:00 PM**
 
-Actual time needed to complete: **________**
+Actual time needed to complete: **40 minutes**
